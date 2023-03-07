@@ -1,5 +1,5 @@
 {
-    "name": "boilerplate-reactrnd-nro",
+    "name": "mbti-test",
     "packageManager": "yarn@3.2.0",
     "scripts": {
         "start:dev": "env-cmd -f ./src/configs/.env.dev yarn run webpack-dev-server --mode=development --open --hot",
@@ -63,7 +63,5 @@
     },
     "version": "1.0.0",
     "main": "src/index.tsx",
-    "repository": "git@nro-gitlab:netrom/boilerplates/react.git",
-    "author": "Alex <alext@netrom.ro>",
     "license": "MIT"
 }

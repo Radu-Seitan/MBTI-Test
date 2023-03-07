@@ -26,7 +26,7 @@ export const Header: FC = () => {
                                     textDecoration: 'none',
                                 }}
                             >
-                                NetRom - Boilerplate
+                                Boilerplate
                             </Typography>
                             <NavMenu />
                             <LanguageDropdown />
