@@ -8,7 +8,7 @@ class SubType:
 
     def __init__(self, name):
         self.name = name
-        self.initial = name[0].upper()
+        self.initial = 'N' if name == 'Intuitive' else name[0].upper()
 
     def __str__(self):
         return f"{self.initial}: {self.name}"
@@ -48,11 +48,13 @@ class Question:
     id: int
     text: str
     direction: SubType
+    keyed: str
 
-    def __init__(self, id: int, text: str, direction: SubType):
+    def __init__(self, id: int, text: str, direction: SubType, keyed: str):
         self.id = id
         self.text = text
         self.direction = direction
+        self.keyed = keyed
 
     def __str__(self):
         return f"Q: {self.text} -> A: {self.direction}"
@@ -69,10 +71,18 @@ class JSON:
         self.question = question
 
 
-def find_subtype(text: str) -> SubType:
-    for t in subtypes_list:
-        if t.name.lower() == text.lower():
-            return t
+def compute_dir(text: str) -> SubType:
+    for t in types_list:
+        if t.negative.name.lower() == text.lower() or t.positive.name.lower() == text.lower():
+            return t.positive
+
+
+def compute_key(text: str) -> str:
+    for t in types_list:
+        if t.negative.name.lower() == text.lower():
+            return '-'
+        elif t.positive.name.lower() == text.lower():
+            return '+'
 
 
 if __name__ == '__main__':
@@ -114,7 +124,7 @@ if __name__ == '__main__':
     with open(TXT_FILE) as file:
         for index, line in enumerate(file):
             statement, characteristic, _ = re.split(r'[()]', line.rstrip())
-            q = Question(index, statement.strip(), find_subtype(characteristic))
+            q = Question(index, statement.strip(), compute_dir(characteristic), compute_key(characteristic))
             questions_list.append(q)
     questions_list = [q for q in questions_list if q.direction is not None]
 
