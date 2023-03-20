@@ -15,7 +15,7 @@
       {
         "positive": {
           "name": "Intuitive",
-          "initial": "I"
+          "initial": "N"
         },
         "negative": {
           "name": "Sensing",
@@ -81,15 +81,17 @@
       "direction": {
         "name": "Extraverted",
         "initial": "E"
-      }
+      },
+      "keyed": "+"
     },
     {
       "id": 1,
       "text": "You often spend time exploring unrealistic yet intriguing ideas.",
       "direction": {
         "name": "Intuitive",
-        "initial": "I"
-      }
+        "initial": "N"
+      },
+      "keyed": "+"
     },
     {
       "id": 2,
@@ -97,39 +99,44 @@
       "direction": {
         "name": "Perceiving",
         "initial": "P"
-      }
+      },
+      "keyed": "+"
     },
     {
       "id": 3,
       "text": "You often think about what you should have said in a conversation long after it has taken place.",
       "direction": {
-        "name": "Introverted",
-        "initial": "I"
-      }
+        "name": "Extraverted",
+        "initial": "E"
+      },
+      "keyed": "-"
     },
     {
       "id": 4,
       "text": "If your friend is sad about something, your first instinct is to support them emotionally, not try to solve their problem.",
       "direction": {
-        "name": "Feeling",
-        "initial": "F"
-      }
+        "name": "Thinking",
+        "initial": "T"
+      },
+      "keyed": "-"
     },
     {
       "id": 6,
       "text": "You often rely on other people to be the ones to start a conversation and keep it going.",
       "direction": {
-        "name": "Introverted",
-        "initial": "I"
-      }
+        "name": "Extraverted",
+        "initial": "E"
+      },
+      "keyed": "-"
     },
     {
       "id": 7,
       "text": "If you have to temporarily put your plans on hold, you make sure it is your top priority to get back on track as soon as possible.",
       "direction": {
-        "name": "Judging",
-        "initial": "J"
-      }
+        "name": "Perceiving",
+        "initial": "P"
+      },
+      "keyed": "-"
     },
     {
       "id": 9,
@@ -137,7 +144,8 @@
       "direction": {
         "name": "Extraverted",
         "initial": "E"
-      }
+      },
+      "keyed": "+"
     },
     {
       "id": 10,
@@ -145,7 +153,8 @@
       "direction": {
         "name": "Extraverted",
         "initial": "E"
-      }
+      },
+      "keyed": "+"
     },
     {
       "id": 11,
@@ -153,23 +162,26 @@
       "direction": {
         "name": "Perceiving",
         "initial": "P"
-      }
+      },
+      "keyed": "+"
     },
     {
       "id": 12,
       "text": "You see yourself as very emotionally stable.",
       "direction": {
-        "name": "Feeling",
-        "initial": "F"
-      }
+        "name": "Thinking",
+        "initial": "T"
+      },
+      "keyed": "-"
     },
     {
       "id": 13,
       "text": "Your mind is always buzzing with unexplored ideas and plans.",
       "direction": {
         "name": "Intuitive",
-        "initial": "I"
-      }
+        "initial": "N"
+      },
+      "keyed": "+"
     },
     {
       "id": 14,
@@ -177,39 +189,44 @@
       "direction": {
         "name": "Thinking",
         "initial": "T"
-      }
+      },
+      "keyed": "+"
     },
     {
       "id": 15,
       "text": "You usually find it difficult to relax when talking in front of many people.",
       "direction": {
-        "name": "Introverted",
-        "initial": "I"
-      }
+        "name": "Extraverted",
+        "initial": "E"
+      },
+      "keyed": "-"
     },
     {
       "id": 16,
       "text": "Generally speaking, you rely more on your experience than your imagination.",
       "direction": {
-        "name": "Sensing",
-        "initial": "S"
-      }
+        "name": "Intuitive",
+        "initial": "N"
+      },
+      "keyed": "-"
     },
     {
       "id": 17,
       "text": "You worry too much about what other people think.",
       "direction": {
-        "name": "Feeling",
-        "initial": "F"
-      }
+        "name": "Thinking",
+        "initial": "T"
+      },
+      "keyed": "-"
     },
     {
       "id": 18,
       "text": "If the room is full, you stay closer to the walls, avoiding the center.",
       "direction": {
-        "name": "Introverted",
-        "initial": "I"
-      }
+        "name": "Extraverted",
+        "initial": "E"
+      },
+      "keyed": "-"
     },
     {
       "id": 19,
@@ -217,39 +234,44 @@
       "direction": {
         "name": "Perceiving",
         "initial": "P"
-      }
+      },
+      "keyed": "+"
     },
     {
       "id": 20,
       "text": "You find it difficult to introduce yourself to other people.",
       "direction": {
-        "name": "Introverted",
-        "initial": "I"
-      }
+        "name": "Extraverted",
+        "initial": "E"
+      },
+      "keyed": "-"
     },
     {
       "id": 21,
       "text": "You often get lost in your thoughts and ignore or forget your surroundings.",
       "direction": {
-        "name": "Introverted",
-        "initial": "I"
-      }
+        "name": "Extraverted",
+        "initial": "E"
+      },
+      "keyed": "-"
     },
     {
       "id": 22,
       "text": "You try to respond to your emails as soon as possible and cannot stand a messy inbox.",
       "direction": {
-        "name": "Judging",
-        "initial": "J"
-      }
+        "name": "Perceiving",
+        "initial": "P"
+      },
+      "keyed": "-"
     },
     {
       "id": 24,
       "text": "You do not usually initiate conversations.",
       "direction": {
-        "name": "Introverted",
-        "initial": "I"
-      }
+        "name": "Extraverted",
+        "initial": "E"
+      },
+      "keyed": "-"
     },
     {
       "id": 25,
@@ -257,7 +279,8 @@
       "direction": {
         "name": "Thinking",
         "initial": "T"
-      }
+      },
+      "keyed": "+"
     },
     {
       "id": 26,
@@ -265,15 +288,17 @@
       "direction": {
         "name": "Thinking",
         "initial": "T"
-      }
+      },
+      "keyed": "+"
     },
     {
       "id": 27,
       "text": "Being organized is more important to you than being adaptable.",
       "direction": {
-        "name": "Judging",
-        "initial": "J"
-      }
+        "name": "Perceiving",
+        "initial": "P"
+      },
+      "keyed": "-"
     },
     {
       "id": 28,
@@ -281,31 +306,35 @@
       "direction": {
         "name": "Extraverted",
         "initial": "E"
-      }
+      },
+      "keyed": "+"
     },
     {
       "id": 29,
       "text": "Winning a debate matters less to you than making sure no one gets upset.",
       "direction": {
-        "name": "Feeling",
-        "initial": "F"
-      }
+        "name": "Thinking",
+        "initial": "T"
+      },
+      "keyed": "-"
     },
     {
       "id": 30,
       "text": "You often feel as if you have to justify yourself to other people.",
       "direction": {
-        "name": "Feeling",
-        "initial": "F"
-      }
+        "name": "Thinking",
+        "initial": "T"
+      },
+      "keyed": "-"
     },
     {
       "id": 31,
       "text": "Your home and work environments are quite tidy.",
       "direction": {
-        "name": "Judging",
-        "initial": "J"
-      }
+        "name": "Perceiving",
+        "initial": "P"
+      },
+      "keyed": "-"
     },
     {
       "id": 32,
@@ -313,15 +342,17 @@
       "direction": {
         "name": "Extraverted",
         "initial": "E"
-      }
+      },
+      "keyed": "+"
     },
     {
       "id": 34,
       "text": "Your travel plans are usually well thought out.",
       "direction": {
-        "name": "Judging",
-        "initial": "J"
-      }
+        "name": "Perceiving",
+        "initial": "P"
+      },
+      "keyed": "-"
     },
     {
       "id": 35,
@@ -329,7 +360,8 @@
       "direction": {
         "name": "Thinking",
         "initial": "T"
-      }
+      },
+      "keyed": "+"
     },
     {
       "id": 37,
@@ -337,7 +369,8 @@
       "direction": {
         "name": "Thinking",
         "initial": "T"
-      }
+      },
+      "keyed": "+"
     },
     {
       "id": 38,
@@ -345,7 +378,8 @@
       "direction": {
         "name": "Thinking",
         "initial": "T"
-      }
+      },
+      "keyed": "+"
     },
     {
       "id": 39,
@@ -353,143 +387,161 @@
       "direction": {
         "name": "Perceiving",
         "initial": "P"
-      }
+      },
+      "keyed": "+"
     },
     {
       "id": 40,
       "text": "You are often envious of others.",
       "direction": {
-        "name": "Feeling",
-        "initial": "F"
-      }
+        "name": "Thinking",
+        "initial": "T"
+      },
+      "keyed": "-"
     },
     {
       "id": 41,
       "text": "You are more of a detail-oriented person than a big-picture thinker.",
       "direction": {
-        "name": "Sensing",
-        "initial": "S"
-      }
+        "name": "Intuitive",
+        "initial": "N"
+      },
+      "keyed": "-"
     },
     {
       "id": 42,
       "text": "You are very affectionate with people you care about.",
       "direction": {
-        "name": "Feeling",
-        "initial": "F"
-      }
+        "name": "Thinking",
+        "initial": "T"
+      },
+      "keyed": "-"
     },
     {
       "id": 43,
       "text": "You have a careful and methodical approach to life.",
       "direction": {
-        "name": "Judging",
-        "initial": "J"
-      }
+        "name": "Perceiving",
+        "initial": "P"
+      },
+      "keyed": "-"
     },
     {
       "id": 44,
       "text": "You are still bothered by mistakes that you made a long time ago.",
       "direction": {
-        "name": "Introverted",
-        "initial": "I"
-      }
+        "name": "Extraverted",
+        "initial": "E"
+      },
+      "keyed": "-"
     },
     {
       "id": 45,
       "text": "At parties and similar events, you can mostly be found farther away from the action.",
       "direction": {
-        "name": "Introverted",
-        "initial": "I"
-      }
+        "name": "Extraverted",
+        "initial": "E"
+      },
+      "keyed": "-"
     },
     {
       "id": 46,
       "text": "You often find yourself lost in thought when you are in a quiet room.",
       "direction": {
-        "name": "Introverted",
-        "initial": "I"
-      }
+        "name": "Extraverted",
+        "initial": "E"
+      },
+      "keyed": "-"
     },
     {
       "id": 47,
       "text": "You prefer to work alone or with a small team rather than in a large group.",
       "direction": {
-        "name": "Introverted",
-        "initial": "I"
-      }
+        "name": "Extraverted",
+        "initial": "E"
+      },
+      "keyed": "-"
     },
     {
       "id": 48,
       "text": "You are more interested in a general idea than in the details of its implementation.",
       "direction": {
         "name": "Intuitive",
-        "initial": "I"
-      }
+        "initial": "N"
+      },
+      "keyed": "+"
     },
     {
       "id": 49,
       "text": "You are the kind of person who would be most likely to develop a detailed plan before starting a new project.",
       "direction": {
-        "name": "Judging",
-        "initial": "J"
-      }
+        "name": "Perceiving",
+        "initial": "P"
+      },
+      "keyed": "-"
     },
     {
       "id": 50,
       "text": "You are quick to forgive others but slow to forgive yourself.",
       "direction": {
-        "name": "Introverted",
-        "initial": "I"
-      }
+        "name": "Extraverted",
+        "initial": "E"
+      },
+      "keyed": "-"
     },
     {
       "id": 51,
       "text": "You are not a particularly outgoing person, and you rarely initiate conversations.",
       "direction": {
-        "name": "Introverted",
-        "initial": "I"
-      }
+        "name": "Extraverted",
+        "initial": "E"
+      },
+      "keyed": "-"
     },
     {
       "id": 52,
       "text": "You are more likely to follow your heart than your head.",
       "direction": {
-        "name": "Feeling",
-        "initial": "F"
-      }
+        "name": "Thinking",
+        "initial": "T"
+      },
+      "keyed": "-"
     },
     {
       "id": 53,
       "text": "You are often so focused on your own interests that you can forget about other people's needs.",
       "direction": {
-        "name": "Introverted",
-        "initial": "I"
-      }
+        "name": "Extraverted",
+        "initial": "E"
+      },
+      "keyed": "-"
     },
     {
       "id": 54,
       "text": "You are a practical person who prefers to focus on the present rather than the future.",
       "direction": {
-        "name": "Sensing",
-        "initial": "S"
-      }
+        "name": "Intuitive",
+        "initial": "N"
+      },
+      "keyed": "-"
     },
     {
       "id": 55,
       "text": "You are more comfortable in a quiet and peaceful environment than in a busy and noisy one.",
       "direction": {
-        "name": "Introverted",
-        "initial": "I"
-      }
+        "name": "Extraverted",
+        "initial": "E"
+      },
+      "keyed": "-"
     },
     {
       "id": 56,
       "text": "You have a tendency to second-guess yourself.",
       "direction": {
-        "name": "Introverted",
-        "initial": "I"
-      }
+        "name": "Extraverted",
+        "initial": "E"
+      },
+      "keyed": "-"
     },
     {
       "id": 57,
@@ -497,23 +549,26 @@
       "direction": {
         "name": "Perceiving",
         "initial": "P"
-      }
+      },
+      "keyed": "+"
     },
     {
       "id": 58,
       "text": "You have a strong sense of duty and responsibility.",
       "direction": {
-        "name": "Judging",
-        "initial": "J"
-      }
+        "name": "Perceiving",
+        "initial": "P"
+      },
+      "keyed": "-"
     },
     {
       "id": 59,
       "text": "You are a deeply emotional person who often wears their heart on their sleeve.",
       "direction": {
-        "name": "Feeling",
-        "initial": "F"
-      }
+        "name": "Thinking",
+        "initial": "T"
+      },
+      "keyed": "-"
     },
     {
       "id": 60,
@@ -521,15 +576,17 @@
       "direction": {
         "name": "Perceiving",
         "initial": "P"
-      }
+      },
+      "keyed": "+"
     },
     {
       "id": 61,
       "text": "You are very good at focusing on the task at hand and ignoring distractions.",
       "direction": {
-        "name": "Judging",
-        "initial": "J"
-      }
+        "name": "Perceiving",
+        "initial": "P"
+      },
+      "keyed": "-"
     },
     {
       "id": 62,
@@ -537,23 +594,26 @@
       "direction": {
         "name": "Thinking",
         "initial": "T"
-      }
+      },
+      "keyed": "+"
     },
     {
       "id": 63,
       "text": "You are the kind of person who would rather follow a proven strategy than try something new and untested.",
       "direction": {
-        "name": "Judging",
-        "initial": "J"
-      }
+        "name": "Perceiving",
+        "initial": "P"
+      },
+      "keyed": "-"
     },
     {
       "id": 64,
       "text": "You tend to be more focused on the big picture than on the details.",
       "direction": {
         "name": "Intuitive",
-        "initial": "I"
-      }
+        "initial": "N"
+      },
+      "keyed": "+"
     }
   ]
 }
