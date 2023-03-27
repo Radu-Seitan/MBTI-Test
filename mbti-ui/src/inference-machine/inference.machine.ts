@@ -5,10 +5,12 @@ export class InferenceMachine {
         const questions: Question[] = knowledgeBase.question as Question[];
         const personalityResults: PersonalityResults = this.initializePersonalitiesResults();
         answers.forEach((answer, index) => {
-            const answerDirection = questions[index].direction.name;
+            const question: Question = questions[index];
+            const signOfAddition = question.keyed === '+' ? 1 : -1;
+            const answerDirectionName = question.direction.name;
 
-            personalityResults[answerDirection].totalPoints += answer.points;
-            personalityResults[answerDirection].totalQuestionsAsked ++;
+            personalityResults[answerDirectionName].totalPoints += signOfAddition * answer.points;
+            personalityResults[answerDirectionName].totalQuestionsAsked ++;
         });
 
         return personalityResults;
@@ -17,12 +19,8 @@ export class InferenceMachine {
     private initializePersonalitiesResults(): PersonalityResults {
         return {
             Extraverted: {totalPoints:0, totalQuestionsAsked: 0},
-            Introverted: {totalPoints:0, totalQuestionsAsked: 0},
-            Sensing: {totalPoints:0, totalQuestionsAsked: 0},
             Intuitive: {totalPoints:0, totalQuestionsAsked: 0},
             Thinking: {totalPoints:0, totalQuestionsAsked: 0},
-            Feeling: {totalPoints:0, totalQuestionsAsked: 0},
-            Judging: {totalPoints:0, totalQuestionsAsked: 0},
             Perceiving: {totalPoints:0, totalQuestionsAsked: 0}
         }
     }
