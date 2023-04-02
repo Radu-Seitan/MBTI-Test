@@ -22,7 +22,7 @@ import './NavMenu.scss';
 export const NavMenu = () => {
     const dispatch = useDispatch();
     const { t } = useTranslation();
-    const [anchorElOperations, setAnchorElOperations] =
+    const [anchorElPersonalities, setAnchorElPersonalities] =
         useState<null | HTMLElement>(null);
     const [anchorElSettings, setAnchorElSettings] =
         useState<null | HTMLElement>(null);
@@ -31,12 +31,14 @@ export const NavMenu = () => {
         setAnchorElSettings(event.currentTarget);
     };
 
-    const handleOpenOperationsMenu = (event: React.MouseEvent<HTMLElement>) => {
-        setAnchorElOperations(event.currentTarget);
+    const handleOpenPersonalitiesMenu = (
+        event: React.MouseEvent<HTMLElement>
+    ) => {
+        setAnchorElPersonalities(event.currentTarget);
     };
 
-    const handleCloseOperationsMenu = () => {
-        setAnchorElOperations(null);
+    const handleClosePersonalitiesMenu = () => {
+        setAnchorElPersonalities(null);
     };
 
     const handleCloseSettingsMenu = () => {
@@ -54,17 +56,17 @@ export const NavMenu = () => {
         <>
             <Box className={'nav-menu-container'}>
                 <Button
-                    onClick={handleOpenOperationsMenu}
+                    onClick={handleOpenPersonalitiesMenu}
                     color="secondary"
                     variant="contained"
                 >
-                    <Typography className={'operations-text'}>
-                        {t('operations')}
+                    <Typography className={'personalities-text'}>
+                        {t('personalities')}
                     </Typography>
                 </Button>
 
                 <Menu
-                    anchorEl={anchorElOperations}
+                    anchorEl={anchorElPersonalities}
                     anchorOrigin={{
                         vertical: 'top',
                         horizontal: 'right',
@@ -74,15 +76,15 @@ export const NavMenu = () => {
                         vertical: 'top',
                         horizontal: 'right',
                     }}
-                    open={Boolean(anchorElOperations)}
-                    onClose={handleCloseOperationsMenu}
+                    open={Boolean(anchorElPersonalities)}
+                    onClose={handleClosePersonalitiesMenu}
                 >
                     {pageItems.map((page) => (
                         <MenuItem
                             component={Link}
                             to={page.route}
                             key={page.key}
-                            onClick={handleCloseOperationsMenu}
+                            onClick={handleClosePersonalitiesMenu}
                         >
                             <Typography textAlign="center">
                                 {t(page.title)}

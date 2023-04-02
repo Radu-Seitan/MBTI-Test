@@ -6,9 +6,9 @@ export type Menu = {
 
 export const pageItems: Menu[] = [
     {
-        key: 'orders',
-        title: 'Orders',
-        route: '/orders',
+        key: 'personalities',
+        title: 'personalities',
+        route: '/all-personalities',
     },
 ];
 
