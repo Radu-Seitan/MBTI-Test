@@ -1,0 +1,15 @@
+@import '../../scss/variables.scss';
+
+.menu-container {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.language-dropdown-container {
+    margin-left: auto;
+}
+
+.home-button-text {
+    font-size: 20px !important;
+}

@@ -3,9 +3,10 @@ import { changeLanguage } from 'i18next';
 import { useTranslation } from 'react-i18next';
 import { Outlet } from 'react-router-dom';
 
-import { Header } from './components/Header';
+import { AppHeader } from './components/AppHeader';
 
 import './App.scss';
+
 
 const App: FC = () => {
     useTranslation(); // needed in order to initialize the translations for children
@@ -18,7 +19,7 @@ const App: FC = () => {
 
     return (
         <>
-            <Header />
+            <AppHeader />
             <Outlet />
         </>
     );

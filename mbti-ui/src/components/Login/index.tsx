@@ -13,8 +13,8 @@ import {
 } from '@mui/material';
 import { AccountCircle, Lock } from '@mui/icons-material';
 
-import { getUser } from '../store/user/reducer';
-import { RootStore } from '../store/types/RootStore';
+import { getUser } from '../../store/user/reducer';
+import { RootStore } from '../../store/types/RootStore';
 
 import './Login.scss';
 

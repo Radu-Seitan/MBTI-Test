@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 
-import { RootStore } from '../store/types/RootStore';
+import { RootStore } from '../../store/types/RootStore';
 
 export const Home: FC = () => {
     const { t } = useTranslation();

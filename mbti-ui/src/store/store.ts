@@ -12,7 +12,6 @@ import {
 import storage from 'redux-persist/lib/storage';
 
 import userReducer from './user/reducer';
-import orderReducer from './order/reducer';
 import rootSaga from './sagas';
 
 const userPersistConfig = {
@@ -25,7 +24,6 @@ const sagaMiddleware = createSagaMiddleware();
 
 const reducer = combineReducers({
     user: persistReducer(userPersistConfig, userReducer),
-    orders: orderReducer,
 });
 
 const store = configureStore({
