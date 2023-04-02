@@ -28,7 +28,7 @@ export const AppHeader: FC = () => {
                     {user?.isAuthenticated && (
                         <>
                             <Button
-                                color="primary"
+                                color="secondary"
                                 variant="contained"
                                 href="/"
                             >

@@ -7,22 +7,12 @@ import {
     SelectChangeEvent,
 } from '@mui/material';
 
-const style = {
-    '&.MuiOutlinedInput-root': {
-        backgroundColor: '#fff',
-        borderColor: 'black',
-        '&.Mui-focused fieldset': {
-            borderColor: 'black',
-            borderWidth: '1px',
-        },
-    },
-};
+import './LanguageDropdown.scss';
 
 export const LanguageDropdown: FC = () => {
     return (
-        <FormControl sx={{ m: 1, borderColor: '#fff' }} size="small">
+        <FormControl className={'dropdown-container'} size="small">
             <Select
-                sx={style}
                 value={i18next.language}
                 onChange={(event: SelectChangeEvent) => {
                     changeLanguage(event.target.value, () => {
@@ -31,10 +21,10 @@ export const LanguageDropdown: FC = () => {
                 }}
             >
                 <MenuItem value={'en-US'} key={'en-US'}>
-                    en-us
+                    EN
                 </MenuItem>
-                <MenuItem value={'en-GB'} key={'en-gb'}>
-                    en-gb
+                <MenuItem value={'ro'} key={'ro'}>
+                    RO
                 </MenuItem>
             </Select>
         </FormControl>

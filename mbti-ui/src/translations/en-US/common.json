@@ -1,4 +1,6 @@
 {
     "common.hello": "This is the hello translation",
-    "grid.title": "Grid Overview"
+    "home": "Home",
+    "operations": "Operations",
+    "logout": "Sign out"
 }

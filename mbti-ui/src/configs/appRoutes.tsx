@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 
 import { Home } from '../components/Home';
 import App from '../App';
+import { About } from '../components/About';
 
 export const AppRoutes: FC = () => {
     return (
@@ -12,6 +13,12 @@ export const AppRoutes: FC = () => {
                     path={'/'}
                     element={                   
                         <Home />                
+                    }
+                />
+                <Route
+                    path={'/about'}
+                    element={                   
+                        <About />                
                     }
                 />
             </Route>
