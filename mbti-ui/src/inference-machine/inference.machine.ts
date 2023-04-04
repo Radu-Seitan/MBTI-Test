@@ -12,8 +12,8 @@ export class InferenceMachine {
             knowledge_base.questions as QuestionType[];
         const personalityResults: PersonalityResults =
             this.initializePersonalitiesResults();
-        answers.forEach((answer, index) => {
-            const question: QuestionType = questions[index];
+        answers.forEach(answer => {
+            const question: QuestionType = questions.find(q => q.id === answer.id)!;
             const signOfAddition = question.keyed === '+' ? 1 : -1;
             const answerDirectionName = question.direction.name;
 
