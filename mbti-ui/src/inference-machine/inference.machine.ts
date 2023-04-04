@@ -1,8 +1,8 @@
-import { Answer, PersonalityResults, Question } from "./types";
-import * as knowledgeBase from '../../../knowledge_base/knowledge_base.json'
+import { Answer, PersonalityResults, PersonalityStatistics, PersonalityTypeStatistics, Question } from "./types";
+import knowledge_base from '../../../knowledge_base/knowledge_base.json';
 export class InferenceMachine {
-    public processAnswers(answers: Answer[]): PersonalityResults {
-        const questions: Question[] = knowledgeBase.question as Question[];
+    public processAnswers(answers: Answer[]): PersonalityStatistics {
+        const questions: Question[] = knowledge_base.questions as Question[];
         const personalityResults: PersonalityResults = this.initializePersonalitiesResults();
         answers.forEach((answer, index) => {
             const question: Question = questions[index];
@@ -13,7 +13,7 @@ export class InferenceMachine {
             personalityResults[answerDirectionName].totalQuestionsAsked ++;
         });
 
-        return personalityResults;
+        return this.calculatePersonalityStatistics(personalityResults);
     }
 
     private initializePersonalitiesResults(): PersonalityResults {
@@ -23,5 +23,27 @@ export class InferenceMachine {
             Thinking: {totalPoints:0, totalQuestionsAsked: 0},
             Perceiving: {totalPoints:0, totalQuestionsAsked: 0}
         }
+    }
+
+    private calculatePersonalityStatistics(personalityResults: PersonalityResults): PersonalityStatistics {
+        const extravertedPercentage = Math.round(this.calculatePercentateForDirection(personalityResults.Extraverted));
+        const intuitivePercentage = Math.round(this.calculatePercentateForDirection(personalityResults.Intuitive));
+        const thinkingPercentage = Math.round(this.calculatePercentateForDirection(personalityResults.Thinking));
+        const perceivingPercentage = Math.round(this.calculatePercentateForDirection(personalityResults.Perceiving));
+        return {
+            'Extraverted': extravertedPercentage,
+            'Introverted': 100 - extravertedPercentage,
+            'Intuitive': intuitivePercentage,
+            'Sensing': 100 - intuitivePercentage,
+            'Thinking': thinkingPercentage,
+            'Feeling': 100 - thinkingPercentage,
+            'Perceiving': perceivingPercentage,
+            'Judging': 100 - perceivingPercentage,
+        }
+    }
+
+    private calculatePercentateForDirection(personalityTypeStatistics: PersonalityTypeStatistics): number {
+        console.log(personalityTypeStatistics);
+        return 100 * (personalityTypeStatistics.totalPoints+3*personalityTypeStatistics.totalQuestionsAsked)/(2*3*personalityTypeStatistics.totalQuestionsAsked)
     }
 }

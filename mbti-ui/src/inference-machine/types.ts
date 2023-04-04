@@ -1,8 +1,8 @@
 export interface Answer {
     points: number;
 }
-
 type DirectionName = 'Extraverted' | 'Intuitive' | 'Thinking' |  'Perceiving';
+type AllPersonalities = DirectionName | 'Introverted' | 'Sensing' | 'Feeling' | 'Judging';
 
 export interface Question {
     id: number;
@@ -23,3 +23,6 @@ export type PersonalityResults = {
     [k in DirectionName]: PersonalityTypeStatistics;
 }
 
+export type PersonalityStatistics = {
+    [k in AllPersonalities]: number;
+}
