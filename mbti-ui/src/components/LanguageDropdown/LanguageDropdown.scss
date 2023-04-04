@@ -1,7 +1,7 @@
 @import '../../scss/variables.scss';
 
 .MuiOutlinedInput-root {
-    background-color: #fff;
+    background-color: $secondary;
     border-color: $primary !important;
 }
 
@@ -13,4 +13,8 @@
 .dropdown-container {
     margin: 1;
     border-color: $secondary !important;
+}
+
+.MuiMenu-list {
+    background-color: $secondary;
 }

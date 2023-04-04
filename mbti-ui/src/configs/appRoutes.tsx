@@ -4,7 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import { Home } from '../components/Home';
 import App from '../App';
 import { About } from '../components/About';
-import AllPersonalities from '../components/Personalities/AllPersonalities';
+import { AllPersonalities } from '../components/Personalities/AllPersonalities';
 
 export const AppRoutes: FC = () => {
     return (

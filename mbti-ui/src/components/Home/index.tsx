@@ -1,25 +1,24 @@
-import { FC } from 'react';
+import { FC, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useSelector } from 'react-redux';
+import { Box, Pagination, Stack } from '@mui/material';
 
-import { RootStore } from '../../store/types/RootStore';
-import { Box } from '@mui/material';
+import knowledge_base from '../../../../knowledge_base/knowledge_base.json';
 
 import './Home.scss';
+import { Answer, QuestionType } from '../../inference-machine/types';
+import { Question } from './Question';
+import { QuestionList } from './QuestionList';
 
 export const Home: FC = () => {
     const { t } = useTranslation();
-    const user = useSelector((state: RootStore) => state.user);
+    const questions: QuestionType[] =
+        knowledge_base.questions as QuestionType[];
+    const answers: Answer[] = [];
 
     return (
         <>
             <Box className={'background-image'}></Box>
-            <Box>
-                <Box className={'question-box'}>
-                    {user && <h1> Hello, {user.fullName} </h1>}
-                    <Box>{t('common.hello')}</Box>
-                </Box>
-            </Box>
+            <QuestionList questions={questions} answers={answers} />
         </>
     );
 };

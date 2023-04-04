@@ -10,7 +10,8 @@ import { Box } from '@mui/material';
 const useStyles = makeStyles((theme: any) => ({
     root: {
         flexGrow: 1,
-        padding: theme.spacing(4),
+        padding: theme.spacing(5),
+        backgroundColor: '#efefef',
     },
     card: {
         height: '100%',
@@ -24,6 +25,7 @@ const useStyles = makeStyles((theme: any) => ({
         transition: 'transform 0.3s ease-out',
         '&:hover': {
             transform: 'scale(1.05)',
+            cursor: 'pointer',
         },
     },
     cardMedia: {
@@ -48,104 +50,121 @@ const useStyles = makeStyles((theme: any) => ({
 
 const personalities = [
     {
-        type: 'INFJ',
-        image: '/images/infj.png',
-        description:
-            'Advocate personalities are creative and insightful individuals who have a deep understanding of human motivations and relationships. They enjoy exploring philosophical and spiritual ideas and are often drawn to careers in counseling, teaching, and the arts.',
-    },
-    {
         type: 'INTJ',
-        image: '/images/intj.png',
+        nickname: 'The Architect',
+        image: '../../../asset/resource/intj-architect.svg',
         description:
-            'Architect personalities are analytical and strategic thinkers who excel at solving complex problems. They are natural leaders who are skilled at organizing people and resources to achieve their goals. They are often drawn to careers in science, engineering, and business.',
-    },
-    {
-        type: 'INFP',
-        image: '/images/infp.png',
-        description:
-            'Mediator personalities are empathetic and idealistic individuals who have a strong sense of compassion and a desire to make the world a better place. They are often drawn to careers in counseling, social work, and the arts.',
+            'Architect individuals are analytical and strategic thinkers who excel at solving complex problems. They are natural leaders who are skilled at organizing people and resources to achieve their goals. They are often drawn to careers in science, engineering, and business.',
     },
     {
         type: 'INTP',
-        image: '/images/intp.png',
+        nickname: 'The Logician',
+        image: '../../../asset/resource/intp-logician.svg',
         description:
-            'Logician personalities are analytical and curious individuals who enjoy exploring the underlying principles of the world around them. They are often drawn to careers in science, engineering, and technology.',
-    },
-    {
-        type: 'ENFJ',
-        image: '/images/enfj.png',
-        description:
-            'Protagonist personalities are charismatic and inspiring individuals who have a natural ability to lead and motivate others. They are often drawn to careers in teaching, counseling, and social work.',
+            'Logician individuals are analytical and curious individuals who enjoy exploring the underlying principles of the world around them. They are often drawn to careers in science, engineering, and technology.',
     },
     {
         type: 'ENTJ',
-        image: '/images/entj.png',
+        nickname: 'The Commander',
+        image: '../../../asset/resource/entj-commander.svg',
         description:
-            'Commander personalities are confident and assertive individuals who have a natural talent for organizing people and resources to achieve their goals. They are often drawn to careers in business, law, and politics.',
-    },
-    {
-        type: 'ENFP',
-        image: '/images/enfp.png',
-        description:
-            'Campaigner personalities are enthusiastic and imaginative individuals who enjoy exploring new ideas and possibilities. They are often drawn to careers in the arts, counseling, and social work.',
+            'Commander individuals are confident and assertive individuals who have a natural talent for organizing people and resources to achieve their goals. They are often drawn to careers in business, law, and politics.',
     },
     {
         type: 'ENTP',
-        image: '/imagesentp.png',
+        nickname: 'The Debater',
+        image: '../../../asset/resource/entp-debater.svg',
         description:
-            'Debater personalities are quick-witted and curious individuals who enjoy debating ideas and challenging others to think differently. They are often drawn to careers in law, business, and technology.',
+            'Debater individuals are quick-witted and curious individuals who enjoy debating ideas and challenging others to think differently. They are often drawn to careers in law, business, and technology.',
     },
     {
-        type: 'ISTJ',
-        image: '/images/istj.png',
+        type: 'INFJ',
+        nickname: 'The Advocate',
+        image: '../../../asset/resource/infj-advocate.svg',
         description:
-            'Logistician personalities are practical and reliable individuals who have a strong sense of duty and responsibility. They are often drawn to careers in finance, accounting, and law enforcement.',
+            'Advocate individuals are creative and insightful individuals who have a deep understanding of human motivations and relationships. They enjoy exploring philosophical and spiritual ideas and are often drawn to careers in counseling, teaching, and the arts.',
+    },
+    {
+        type: 'INFP',
+        nickname: 'The Mediator',
+        image: '../../../asset/resource/infp-mediator.svg',
+        description:
+            'Mediator individuals are empathetic and idealistic individuals who have a strong sense of compassion and a desire to make the world a better place. They are often drawn to careers in counseling, social work, and the arts.',
+    },
+    {
+        type: 'ENFJ',
+        nickname: 'The Protagonist',
+        image: '../../../asset/resource/enfj-protagonist.svg',
+        description:
+            'Protagonist individuals are charismatic and inspiring individuals who have a natural ability to lead and motivate others. They are often drawn to careers in teaching, counseling, and social work.',
+    },
+    {
+        type: 'ENFP',
+        nickname: 'The Campaigner',
+        image: '../../../asset/resource/enfp-campaigner.svg',
+        description:
+            'Campaigner individuals are enthusiastic and imaginative individuals who enjoy exploring new ideas and possibilities. They are often drawn to careers in the arts, counseling, and social work.',
+    },
+
+    {
+        type: 'ISTJ',
+        nickname: 'The Logistician',
+        image: '../../../asset/resource/istj-logistician.svg',
+        description:
+            'Logistician individuals are practical and reliable individuals who have a strong sense of duty and responsibility. They are often drawn to careers in finance, accounting, and law enforcement.',
     },
     {
         type: 'ISFJ',
-        image: '/images/isfj.png',
+        nickname: 'The Defender',
+        image: '../../../asset/resource/isfj-defender.svg',
         description:
-            'Defender personalities are caring and loyal individuals who have a deep sense of empathy and a desire to help others. They are often drawn to careers in nursing, social work, and education.',
+            'Defender individuals are caring and loyal individuals who have a deep sense of empathy and a desire to help others. They are often drawn to careers in nursing, social work, and education.',
     },
     {
         type: 'ESTJ',
-        image: '/images/estj.png',
+        nickname: 'The Executive',
+        image: '../../../asset/resource/estj-executive.svg',
         description:
-            'Executive personalities are confident and decisive individuals who have a natural talent for managing people and projects. They are often drawn to careers in business, law enforcement, and the military.',
+            'Executive individuals are confident and decisive individuals who have a natural talent for managing people and projects. They are often drawn to careers in business, law enforcement, and the military.',
     },
     {
         type: 'ESFJ',
-        image: '/images/esfj.png',
+        nickname: 'The Consul',
+        image: '../../../asset/resource/esfj-consul.svg',
         description:
-            'Consul personalities are warm and caring individuals who enjoy creating harmony and stability in their environments. They are often drawn to careers in healthcare, education, and social work.',
+            'Consul individuals are warm and caring individuals who enjoy creating harmony and stability in their environments. They are often drawn to careers in healthcare, education, and social work.',
     },
     {
         type: 'ISTP',
-        image: '/images/istp.png',
+        nickname: 'The Virtuoso',
+        image: '../../../asset/resource/istp-virtuoso.svg',
         description:
-            'Virtuoso personalities are adventurous and independent individuals who enjoy exploring the world around them. They are often drawn to careers in the arts, engineering, and sports.',
+            'Virtuoso individuals are adventurous and independent individuals who enjoy exploring the world around them. They are often drawn to careers in the arts, engineering, and sports.',
     },
     {
         type: 'ISFP',
-        image: '/images/isfp.png',
+        nickname: 'The Adventurer',
+        image: '../../../asset/resource/isfp-adventurer.svg',
         description:
-            'Adventurer personalities are artistic and spontaneous individuals who enjoy exploring new experiences and sensations. They are often drawn to careers in the arts, hospitality, and travel.',
+            'Adventurer individuals are artistic and spontaneous individuals who enjoy exploring new experiences and sensations. They are often drawn to careers in the arts, hospitality, and travel.',
     },
     {
         type: 'ESTP',
-        image: '/images/estp.png',
+        nickname: 'The Entrepreneur',
+        image: '../../../asset/resource/estp-entrepreneur.svg',
         description:
-            'Entrepreneur personalities are energetic and confident individuals who have a natural talent for taking risks and seizing opportunities. They are often drawn to careers in sales, marketing, and entertainment.',
+            'Entrepreneur individuals are energetic and confident individuals who have a natural talent for taking risks and seizing opportunities. They are often drawn to careers in sales, marketing, and entertainment.',
     },
     {
         type: 'ESFP',
-        image: '/images/esfp.png',
+        nickname: 'The Entertainer',
+        image: '../../../asset/resource/esfp-entertainer.svg',
         description:
-            'Entertainer personalities are outgoing and sociable individuals who enjoy making others laugh and feel good. They are often drawn to careers in the arts, hospitality, and customer service.',
+            'Entertainer individuals are outgoing and sociable individuals who enjoy making others laugh and feel good. They are often drawn to careers in the arts, hospitality, and customer service.',
     },
 ];
 
-const AllPersonalities = () => {
+export const AllPersonalities = () => {
     const classes = useStyles();
 
     return (
@@ -159,9 +178,13 @@ const AllPersonalities = () => {
                                 image={personality.image}
                                 title={personality.type}
                             />
+
                             <CardContent>
                                 <Typography className={classes.cardTitle}>
                                     {personality.type}
+                                </Typography>
+                                <Typography className={classes.cardTitle}>
+                                    {personality.nickname}
                                 </Typography>
                                 <Typography className={classes.cardDescription}>
                                     {personality.description}
@@ -174,5 +197,3 @@ const AllPersonalities = () => {
         </Box>
     );
 };
-
-export default AllPersonalities;
