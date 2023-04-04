@@ -13,13 +13,18 @@ import './Question.scss';
 interface QuestionProps {
     question: QuestionType;
     onChange: any;
+    initialValue: number;
 }
 
-export const Question: FC<QuestionProps> = ({ question, onChange }) => {
-    const [value, setValue] = useState(0);
+export const Question: FC<QuestionProps> = ({
+    question,
+    onChange,
+    initialValue,
+}) => {
+    const [value, setValue] = useState(initialValue);
 
     const handleChange = (event: any) => {
-        setValue(event.target.value);
+        setValue(+event.target.value);
     };
 
     useEffect(() => {

@@ -23,6 +23,32 @@ export const QuestionList: FC<QuestionListProps> = ({ questions, answers }) => {
     const startIndex = (page - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
 
+    const upsertAnswer = (answerParam: Answer) => {
+        const existingAnswerIndex = answers.findIndex(
+            (answer) => answer.id === answerParam.id
+        );
+        console.log(existingAnswerIndex);
+        if (existingAnswerIndex !== -1) {
+            // Replace the existing answer with the new answer
+            answers[existingAnswerIndex].points = answerParam.points;
+        } else {
+            // Add the new answer to the array
+            answers.push(answerParam);
+        }
+    };
+
+    const computeInitialValue = (question: QuestionType) => {
+        const existingAnswerIndex = answers.findIndex(
+            (answer) => answer.id === question.id
+        );
+        console.log(existingAnswerIndex);
+        if (existingAnswerIndex !== -1) {
+            return answers[existingAnswerIndex].points;
+        } else {
+            return 0;
+        }
+    };
+
     useEffect(() => {
         console.log(answers);
     });
@@ -35,13 +61,14 @@ export const QuestionList: FC<QuestionListProps> = ({ questions, answers }) => {
                         <Question
                             key={question.id}
                             question={question}
+                            initialValue={computeInitialValue(question)}
                             onChange={(value: number) => {
                                 const answer: Answer = {
                                     id: question.id,
                                     points: value,
                                 };
 
-                                answers.push(answer);
+                                upsertAnswer(answer);
                             }}
                         />
                     );
