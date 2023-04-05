@@ -31,19 +31,21 @@ export const Home: FC = () => {
 
     return (
         <Box className={'home-container'}>
-            <Button
-                variant="contained"
-                color="secondary"
-                className={'submit-button'}
-                onClick={() => {
-                    setPersonalityStatistics(
-                        inferenceMachine.processAnswers(answers)
-                    );
-                    handleOpen();
-                }}
-            >
-                Submit
-            </Button>
+            {answers.length === 60 && (
+                <Button
+                    variant="contained"
+                    color="secondary"
+                    className={'submit-button'}
+                    onClick={() => {
+                        setPersonalityStatistics(
+                            inferenceMachine.processAnswers(answers)
+                        );
+                        handleOpen();
+                    }}
+                >
+                    Submit
+                </Button>
+            )}
             <Box className={'background-image'}></Box>
             <QuestionList questions={questions} answers={answers} />
             {personalityStatistics && (
