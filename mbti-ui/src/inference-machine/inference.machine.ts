@@ -65,7 +65,7 @@ export class InferenceMachine {
         personalityTypeStatistics: PersonalityTypeStatistics
     ): number {
         console.log(personalityTypeStatistics);
-        return (
+        return personalityTypeStatistics.totalQuestionsAsked === 0 ? 50 : (
             (100 *
                 (personalityTypeStatistics.totalPoints +
                     3 * personalityTypeStatistics.totalQuestionsAsked)) /
