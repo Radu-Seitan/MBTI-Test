@@ -25,20 +25,15 @@ export const AppHeader: FC = () => {
         <AppBar position="static">
             <Container maxWidth={false}>
                 <Toolbar disableGutters className={'menu-container'}>
-                    {user?.isAuthenticated && (
-                        <>
-                            <Button
-                                color="secondary"
-                                variant="contained"
-                                href="/"
-                            >
-                                <Typography className={'home-button-text'}>
-                                    {t('home')}
-                                </Typography>
-                            </Button>
-                            <NavMenu />
-                        </>
-                    )}
+                    <>
+                        <Button color="secondary" variant="contained" href="/">
+                            <Typography className={'home-button-text'}>
+                                {t('home')}
+                            </Typography>
+                        </Button>
+                        <NavMenu />
+                    </>
+
                     <Box className={'language-dropdown-container'}>
                         <LanguageDropdown />
                     </Box>

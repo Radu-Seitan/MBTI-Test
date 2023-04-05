@@ -27,7 +27,7 @@ export const QuestionList: FC<QuestionListProps> = ({ questions, answers }) => {
         const existingAnswerIndex = answers.findIndex(
             (answer) => answer.id === answerParam.id
         );
-        console.log(existingAnswerIndex);
+
         if (existingAnswerIndex !== -1) {
             // Replace the existing answer with the new answer
             answers[existingAnswerIndex].points = answerParam.points;
@@ -41,17 +41,13 @@ export const QuestionList: FC<QuestionListProps> = ({ questions, answers }) => {
         const existingAnswerIndex = answers.findIndex(
             (answer) => answer.id === question.id
         );
-        console.log(existingAnswerIndex);
+
         if (existingAnswerIndex !== -1) {
             return answers[existingAnswerIndex].points;
         } else {
             return 0;
         }
     };
-
-    useEffect(() => {
-        console.log(answers);
-    });
 
     return (
         <>
