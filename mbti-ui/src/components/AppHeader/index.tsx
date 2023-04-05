@@ -34,9 +34,9 @@ export const AppHeader: FC = () => {
                         <NavMenu />
                     </>
 
-                    <Box className={'language-dropdown-container'}>
+                    {/* <Box className={'language-dropdown-container'}>
                         <LanguageDropdown />
-                    </Box>
+                    </Box> */}
                 </Toolbar>
             </Container>
         </AppBar>

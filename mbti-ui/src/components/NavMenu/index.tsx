@@ -56,16 +56,17 @@ export const NavMenu = () => {
         <>
             <Box className={'nav-menu-container'}>
                 <Button
-                    onClick={handleOpenPersonalitiesMenu}
+                    //onClick={handleOpenPersonalitiesMenu}
                     color="secondary"
                     variant="contained"
+                    href="/all-personalities"
                 >
                     <Typography className={'personalities-text'}>
                         {t('personalities')}
                     </Typography>
                 </Button>
 
-                <Menu
+                {/* <Menu
                     anchorEl={anchorElPersonalities}
                     anchorOrigin={{
                         vertical: 'top',
@@ -133,7 +134,7 @@ export const NavMenu = () => {
                             {t('logout')}
                         </Typography>
                     </MenuItem>
-                </Menu>
+                    </Menu> */}
             </Box>
         </>
     );
