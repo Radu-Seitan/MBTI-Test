@@ -2,7 +2,7 @@ import i18next, { FormatFunction, InitOptions } from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import { format as fnsFormat, startOfDay, formatISO } from 'date-fns';
 
-import enGB from './translations/en-GB/common.json';
+import ro from './translations/ro/common.json';
 import enUS from './translations/en-US/common.json';
 import {
     AppLocale,
@@ -49,11 +49,11 @@ export const initOpts: InitOptions = {
         ],
     },
     resources: {
-        'en-GB': {
-            common: { ...enGB },
-        },
         'en-US': {
             common: { ...enUS },
+        },
+        'ro': {
+            common: { ...ro },
         },
     },
     react: {

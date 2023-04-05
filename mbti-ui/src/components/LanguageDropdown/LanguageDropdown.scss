@@ -1,0 +1,20 @@
+@import '../../scss/variables.scss';
+
+.MuiOutlinedInput-root {
+    background-color: $secondary;
+    border-color: $primary !important;
+}
+
+.Mui-focused fieldset {
+    border-color: $primary !important;
+    border-width: 1px;
+}
+
+.dropdown-container {
+    margin: 1;
+    border-color: $secondary !important;
+}
+
+.MuiMenu-list {
+    background-color: $secondary;
+}

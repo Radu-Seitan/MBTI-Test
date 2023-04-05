@@ -1,17 +1,23 @@
 export interface Answer {
+    id: number;
     points: number;
 }
+type DirectionName = 'Extraverted' | 'Intuitive' | 'Thinking' | 'Perceiving';
+type AllPersonalities =
+    | DirectionName
+    | 'Introverted'
+    | 'Sensing'
+    | 'Feeling'
+    | 'Judging';
 
-type DirectionName = 'Extraverted' | 'Intuitive' | 'Thinking' |  'Perceiving';
-
-export interface Question {
+export interface QuestionType {
     id: number;
     text: string;
     direction: {
         name: DirectionName;
         initial: string;
     };
-    keyed: "+" | "-";
+    keyed: '+' | '-';
 }
 
 export interface PersonalityTypeStatistics {
@@ -21,5 +27,8 @@ export interface PersonalityTypeStatistics {
 
 export type PersonalityResults = {
     [k in DirectionName]: PersonalityTypeStatistics;
-}
+};
 
+export type PersonalityStatistics = {
+    [k in AllPersonalities]: number;
+};
